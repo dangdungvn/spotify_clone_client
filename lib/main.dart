@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:spotify_clone_client/core/theme/theme.dart';
 
-import 'features/auth/view/pages/signup_page.dart';
+import 'features/auth/view/pages/login_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,11 +15,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const SignupPage(),
+      theme: AppTheme.darkThemeMode,
+      home: const LoginPage(),
       debugShowCheckedModeBanner: false,
     );
   }
